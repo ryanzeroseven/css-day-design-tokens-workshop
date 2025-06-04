@@ -4,6 +4,7 @@ import vanillaTokens from '../../css-day-design-tokens/vanilla/build/json/tokens
 import strawberryTokens from '../../css-day-design-tokens/strawberry/build/json/tokens.json?raw';
 import chocolateTokens from '../../css-day-design-tokens/chocolate/build/json/tokens.json?raw';
 import darkChocolateTokens from '../../css-day-design-tokens/dark-chocolate/build/json/tokens.json?raw';
+import watermelonTokens from '../../css-day-design-tokens/watermelon/build/json/tokens.json?raw';
 import './themes.scss';
 import '../../css-day-design-tokens/core/scss/head.scss';
 import '../../css-day-components/src/styles/components.scss';
@@ -16,7 +17,8 @@ const tokens = {
   vanilla: vanillaTokens,
   strawberry: strawberryTokens,
   chocolate: chocolateTokens,
-  'dark-chocolate': darkChocolateTokens
+  'dark-chocolate': darkChocolateTokens,
+  watermelon: watermelonTokens,
 };
 
 /**
@@ -29,10 +31,11 @@ export const decorators = [
       vanilla: 'vanilla',
       strawberry: 'strawberry',
       chocolate: 'chocolate',
-      ['dark-chocolate']: 'dark-chocolate'
+      ['dark-chocolate']: 'dark-chocolate',
+      watermelon: 'watermelon',
     },
-    defaultTheme: 'vanilla'
-  })
+    defaultTheme: 'vanilla',
+  }),
 ];
 
 /** Adjust the files being display based on the theme displayed
@@ -53,13 +56,13 @@ const preview: Preview = {
     controls: {
       matchers: {
         color: /(background|color)$/i,
-        date: /Date$/i
-      }
-    }
+        date: /Date$/i,
+      },
+    },
   },
   storySort: {
-    order: ['Atoms', 'Components', 'Pages', '*']
-  }
+    order: ['Atoms', 'Components', 'Pages', '*'],
+  },
 };
 
 export default preview;
